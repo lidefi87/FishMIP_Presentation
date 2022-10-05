@@ -1,0 +1,2 @@
+# FishMIP workshop October 2022
+Presentation for the FishMIP workshop in St. John's, Canada. It includes some results from PhD work about ACCESS-OM2-01 assessment and `R` notebooks developed for easy extraction and visualisation of FishMIP data. 
