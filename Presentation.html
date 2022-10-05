@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Can we use ACCESS-OM2-01 outputs for ecological applications?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Denisse Fierro Arcos" />
+    <meta name="date" content="2022-10-04" />
+    <script src="Presentation_files/header-attrs-2.16/header-attrs.js"></script>
+    <script src="Presentation_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Presentation_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="Presentation_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="Presentation_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="Presentation_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <link rel="stylesheet" href="css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: center, middle, titular
+background-size: contain
+background-position: -100% 0%
+
+# Can we use ACCESS-OM2-01 outputs for ecological applications? 
+## **Denisse Fierro Arcos**
+### Institute for Marine and Antarctic Studies, University of Tasmania
+Supervisors: Stuart Corney, Amelie Meyer, Andrew Kiss, Petra Heil, Hakase Hayashida 
+
+&lt;img src="Merged.png" width="1000px"/&gt;
+
+---
+
+class: inverse
+
+## Background: Southern Ocean (SO)
+
+- Key component of global climate systems
+- Disproportionately affected by climate change
+- Strong feedback between physical and biological components of SO
+
+
+&lt;figure&gt;
+  &lt;img src="SO_Antarctica_MEASO.png" width="425px" style="vertical-align:middle;margin:0px 300px"/&gt;
+  &lt;figcaption&gt;Marine Ecosystem Assessment for the Southern Ocean (MEASO) regions&lt;/figcaption&gt;
+&lt;/figure&gt;
+---
+
+class: inverse
+
+## Our aim
+
+Understand how changes in the physical environment affect the biological component of Southern Ocean ecosystems.
+
+&lt;figure&gt;
+  &lt;img src="Foodweb_SO.png" width="1100px" style="vertical-align:middle;margin:0px 20px"/&gt;
+  &lt;figcaption&gt;Key processes of the biogeochemical cycle in the Southern Ocean (Figure: Henley et al 2020)&lt;/figcaption&gt;
+&lt;/figure&gt;
+---
+
+class: inverse
+## Our point of difference
+We use outputs from an ocean-sea ice coupled model, ACCESS-OM2-01, instead of observations to investigate environmental change and their ecological impact.
+
+&lt;iframe width="660" height="415" style="vertical-align:middle;margin:0px 200px" src="https://www.youtube.com/embed/10rkfW_YsLs" frameborder="0" allow="accelerometer; autoplay" allowfullscreen&gt;&lt;/iframe&gt;
+---
+
+class: inverse
+## Why do we use model outputs?
+- Regular spatio-temporal coverage
+- Data spans multiple decades
+- High resolution: access to mesoscale features
+- Multiple ecologically relevant variables available
+&lt;figure&gt;
+  &lt;img src="MLD_data.png" width="750px" style="vertical-align:middle;margin:0px 150px"/&gt;
+  &lt;figcaption&gt;Temporal coverage of observational MLD data (Extended Data Figure 2, Sallée et al 2021)&lt;/figcaption&gt;
+&lt;/figure&gt;
+---
+
+class: inverse
+## But first...
+We should consider:
+- What is our ecological problem?
+  - Identify ecologically relevant variables
+- Does the model reproduce past conditions accurately?
+  - Does it capture spatio-temporal variability?
+  - Compare observations and model outputs
+- Does the model replicate mesoscale features?
+
+---
+
+class: inverse
+## Some results: Mixed Layer Depth (MLD)
+&lt;figure&gt;
+  &lt;img src="MLD_comp.png" width="750px" style="vertical-align:middle;margin:0px 175px"/&gt;
+&lt;/figure&gt;
+
+---
+
+class: inverse
+## MLD results
+### The good
+- ACCESS-OM2-01 captures MLD seasonality in the SO
+  - Shallow in summer, deeper in winter
+- Model captures spatial variability
+  - Influence of sea ice and Antarctic Circumpolar Current (ACC)
+
+### The not so good
+- ACCESS-OM2-01 shows:
+  - Shallow areas to be shallower
+  - Deeper areas to be deeper
+- Largest misrepresentations in winter and spring
+  - ACC and Weddell Sea
+  
+---
+
+class: inverse
+## Results: MLD trends
+&lt;figure&gt;
+  &lt;img src="MLD_trends.png" width="750px" style="vertical-align:middle;margin:0px 175px"/&gt;
+&lt;/figure&gt;
+
+---
+
+class: inverse
+## MLD and Southern Ocean ecosystems
+MLD affects primary productivity by:
+- Bringing nutrients to the surface
+- Regulating amount of light available
+
+MLD also affects productivity at higher trophic levels through:
+- Changes to location/timing/intensity of blooms
+- Uncoupling of prey-predator relationships
+- Changes to composition of phytoplankton communities
+
+---
+
+class: inverse
+## Key messages
+- ACCESS-OM2-01 replicates reasonably well past MLD climatology and trends
+- Past environmental conditions and trends vary across SO
+  - Support our use of regions to investigate change
+- Need to establish what a “good model” is for ecologists
+- Need to provide model outputs and workflows that can be easily accessible and implemented by biologists
+
+---
+
+## FishMIP tool for easier spatial extraction
+
+A series of `R` notebooks are being developed that facilitate data access, processing and visualisation.
+
+These notebooks aim to improve reproducibility and are designed to be highly adaptable.
+
+All notebooks are available here:
+### <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> [Fish-MIP](https://github.com/Fish-MIP/FishMIP_extracting-data)
+
+Got any suggestions for a new notebook? Get in touch! Create an issue in the repository or get in touch via email.
+
+---
+
+class: middle, center
+# Thank you!
+
+Feel free to get in touch if you have questions:
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg> [lilian.fierroarcos@utas.edu.au](mailto:lilian.fierroarcos@utas.edu.au)
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> [lidefi87](https://github.com/lidefi87)
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M294.8 188.2h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.8h-29.84v-207.5h29.84zm-14.92-231.1a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1 -19.57 19.57zM300 369h-81V161.3h80.6c76.73 0 110.4 54.83 110.4 103.8C410 318.4 368.4 369 300 369z"/></svg> [0000-0002-5039-6272](https://orcid.org/0000-0002-5039-6272)
+
+&lt;img src="Merged.png" width="1000px"/&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
